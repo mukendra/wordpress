@@ -14,8 +14,9 @@ RUN cp /opt/apache.crt /etc/apache2/ssl
 RUN a2ensite default-ssl
 RUN a2ensite  default-ssl.conf
 RUN apt-get -y install php5 
-RUN apt-get -y install php5-mysql wget nano
+RUN apt-get -y install php5-mysql wget 
 RUN  mkdir /var/www/html/wordpress
+RUN apt-get install -y nano 
 RUN cp /opt/wp-config.php /var/www/html/wp-config.php
 RUN chown -R www-data:www-data  /var/www/html
 RUN chmod -R 755 /var/www/html/
