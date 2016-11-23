@@ -23,5 +23,5 @@ RUN cp -R /opt/* /var/www/html/
 RUN cp /opt/in/wp-config.php /var/www/html/wp-config.php
 RUN chown -R www-data:www-data  /var/www/html
 RUN chmod -R 755 /var/www/html/
-EXPOSE 80 3306
+EXPOSE 80 3306 443
 ENTRYPOINT service apache2 restart && sleep 3600
